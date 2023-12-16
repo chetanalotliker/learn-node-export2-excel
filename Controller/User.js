@@ -1,7 +1,6 @@
 const User = require("../Models/User"); // This has data to be used
 const excelJS = require("exceljs");
 const exportUser = async (req, res) => {
-    console.log("=====================")
     const workbook = new excelJS.Workbook();  // Create a new workbook
     const worksheet = workbook.addWorksheet("My Users"); // New Worksheet
     const path = "./files";  // Path to download excel
