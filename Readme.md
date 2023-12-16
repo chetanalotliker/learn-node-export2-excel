@@ -1,6 +1,6 @@
-# Learn Node Feature to export to excel by using exceljs module
+# Learn Node.js Feature of export to excel
 
-This is the Node Express Application which has a route called as downloadExcel which helps to generate a Excel file in the Files Folder in the application.
+This is the Node.js and Express.js Application which has a route called as downloadExcel which helps to generate a Excel file in the Files Folder in the application.
 
 Inspired by this medium.com blog/article:
 https://medium.com/geekculture/exporting-data-in-excel-file-in-node-js-f1b298997d47
