@@ -1,6 +1,9 @@
 const User = require("../Models/User"); // This has data to be used
 const excelJS = require("exceljs");
-const exportUser = async (req, res) => {
+const { json2xml } = require('xml-js');
+
+const exportUser2Excel = async (req, res) => {
+
     const workbook = new excelJS.Workbook();  // Create a new workbook
     const worksheet = workbook.addWorksheet("My Users"); // New Worksheet
     const path = "./files";  // Path to download excel
@@ -14,7 +17,7 @@ const exportUser = async (req, res) => {
     ];
     // Looping through User data
     let counter = 1;
-    User.forEach((user) => {
+    User.details.forEach((user) => {
         user.s_no = counter;
         worksheet.addRow(user); // Add data in worksheet
         counter++;
@@ -39,4 +42,14 @@ const exportUser = async (req, res) => {
         });
     }
 };
-module.exports = exportUser;
+
+const exportUser2Xml = async (req, res) => {
+    const json = JSON.stringify(User);
+    const xml = json2xml(json, { compact: true, spaces: 1 });
+    res.send(xml)
+}
+
+module.exports = {
+    exportUser2Excel,
+    exportUser2Xml
+}

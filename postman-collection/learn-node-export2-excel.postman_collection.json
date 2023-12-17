@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "9d4d10bd-aa78-4aa3-bdb8-35f013884d60",
+		"name": "learn-node-export2-excel",
+		"description": "# 🚀 Get started here\n\nThis is the postman collection for learn-node-export2-excel node js application.\n\nIt includes exporting the data to excel and saving in the internal project directory.\n\nAnd also converting the json to xml and getting the xml in the api response\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the GET Request in this project\n\n#### **Step 2: Endpoints**\n\n[http://localhost:3000/downloadExcel](http://localhost:3000/downloadExcel)\n\n[http://localhost:3000/downloadXml](http://localhost:3000/downloadXml)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5544862"
+	},
+	"item": [
+		{
+			"name": "Get Excel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/downloadExcel",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"downloadExcel"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Xml",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/downloadXml",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"downloadXml"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
